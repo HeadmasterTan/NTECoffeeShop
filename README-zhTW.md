@@ -7,7 +7,7 @@
 
 ![安魂曲](./docs/Lacrimosa.png)接下來讓 安魂曲 作為代理店長幫你營業。
 
-[點擊下載最新版](https://github.com/HeadmasterTan/NTEFishingTool/releases/tag/v1.1.3) | [曆史版本](https://github.com/HeadmasterTan/NTEFishingTool/releases)
+[點擊下載](https://github.com/HeadmasterTan/NTECoffeeShop/releases)
 
 ## 📘 使用說明
 

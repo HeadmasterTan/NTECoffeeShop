@@ -7,7 +7,7 @@ Please note: Currently, this tool cannot guarantee a 100% perfect clear rate. Es
 
 Now, Let ![Lacrimosa](./docs/Lacrimosa.png)`Lacrimosa` run the shop for you as the acting manager
 
-[Click to download the latest version](https://github.com/HeadmasterTan/NTEFishingTool/releases/tag/v1.1.3) | [Historical Versions](https://github.com/HeadmasterTan/NTEFishingTool/releases)
+[Click to download](https://github.com/HeadmasterTan/NTECoffeeShop/releases)
 
 ## 📘 Instructions
 

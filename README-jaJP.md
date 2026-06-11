@@ -7,7 +7,7 @@
 
 ここからは、![レクイエム](./docs/Lacrimosa.png)レクイエム が代理店長としてあなたの代わりに店舗を営業します。
 
-[最新版をダウンロード](https://github.com/HeadmasterTan/NTEFishingTool/releases/tag/v1.1.3) | [過去のバージョン](https://github.com/HeadmasterTan/NTEFishingTool/releases)
+[最新版をダウンロード](https://github.com/HeadmasterTan/NTECoffeeShop/releases)
 
 ## 📘 使用方法・説明
 
