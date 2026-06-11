@@ -1,7 +1,7 @@
 
 ## 忽略编译输出
-/NTEFishingTool/bin/
-/NTEFishingTool/obj/
+/NTECoffeeShop/bin/
+/NTECoffeeShop/obj/
 
 ## 忽略 Visual Studio 本地配置与缓存
 .vs/
