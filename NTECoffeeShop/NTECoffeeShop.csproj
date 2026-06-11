@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC942522-852B-40A0-A362-3EAFCA1A98EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NTECoffeeShop</RootNamespace>
+    <AssemblyName>NTECoffeeShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoffeeShop\CharacterHandler.cs" />
+    <Compile Include="CoffeeShop\DataModel.cs" />
+    <Compile Include="CoffeeShop\ImageHandler.cs" />
+    <Compile Include="CoffeeShop\ManagerScene.cs" />
+    <Compile Include="CoffeeShop\ProcessHandler.cs" />
+    <Compile Include="CoffeeShop\SimulateEventHandler.cs" />
+    <Compile Include="CoffeeShop\StoreManager.cs" />
+    <Compile Include="CoffeeShop\TaskController.cs" />
+    <Compile Include="CoffeeShop\TemplateController.cs" />
+    <Compile Include="CoffeeShop\WindowsOcrHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+    <Content Include="Resources\Images\**">
+      <Link>Resources\Images\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\HTGame-AppleSauce-1080.png" />
+    <Content Include="Resources\Images\HTGame-AppleSauce-720.png" />
+    <Content Include="Resources\Images\HTGame-AppleSauceCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-AppleSauceCake-720.png" />
+    <Content Include="Resources\Images\HTGame-BeafOnion-1080.png" />
+    <Content Include="Resources\Images\HTGame-BeafOnion-720.png" />
+    <Content Include="Resources\Images\HTGame-BeafOnionToast-1080.png" />
+    <Content Include="Resources\Images\HTGame-BeafOnionToast-720.png" />
+    <Content Include="Resources\Images\HTGame-CandyStick-1080.png" />
+    <Content Include="Resources\Images\HTGame-CandyStick-720.png" />
+    <Content Include="Resources\Images\HTGame-CandyStickCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-CandyStickCake-720.png" />
+    <Content Include="Resources\Images\HTGame-CheeseHam-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheeseHam-720.png" />
+    <Content Include="Resources\Images\HTGame-CheeseHamCroissant-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheeseHamCroissant-720.png" />
+    <Content Include="Resources\Images\HTGame-CheeseMilk-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheeseMilk-720.png" />
+    <Content Include="Resources\Images\HTGame-CheeseMilkCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheeseMilkCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-CheesePomegranate-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheesePomegranate-720.png" />
+    <Content Include="Resources\Images\HTGame-CheesePomegranateCroissant-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheesePomegranateCroissant-720.png" />
+    <Content Include="Resources\Images\HTGame-CheeseSauce-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheeseSauce-720.png" />
+    <Content Include="Resources\Images\HTGame-CheeseSauceCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-CheeseSauceCake-720.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateChips-1080.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateChips-720.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateChipsCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateChipsCake-720.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateCream-1080.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateCream-720.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateCreamCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateCreamCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateJam-1080.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateJam-720.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateJamCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-ChocolateJamCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-CoffeeMachine-1080.png" />
+    <Content Include="Resources\Images\HTGame-CoffeeMachine-720.png" />
+    <Content Include="Resources\Images\HTGame-CookieSugar-1080.png" />
+    <Content Include="Resources\Images\HTGame-CookieSugar-720.png" />
+    <Content Include="Resources\Images\HTGame-CookieSugarCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-CookieSugarCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-CupCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-CupCake-720.png" />
+    <Content Include="Resources\Images\HTGame-CutCroissant-1080.png" />
+    <Content Include="Resources\Images\HTGame-CutCroissant-720.png" />
+    <Content Include="Resources\Images\HTGame-CuttingBoard-1080.png" />
+    <Content Include="Resources\Images\HTGame-CuttingBoard-720.png" />
+    <Content Include="Resources\Images\HTGame-CutToast-1080.png" />
+    <Content Include="Resources\Images\HTGame-CutToast-720.png" />
+    <Content Include="Resources\Images\HTGame-DriedTangerine-1080.png" />
+    <Content Include="Resources\Images\HTGame-DriedTangerine-720.png" />
+    <Content Include="Resources\Images\HTGame-DriedTangerineCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-DriedTangerineCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-EmptyCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-EmptyCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-EmptyCroissant-1080.png" />
+    <Content Include="Resources\Images\HTGame-EmptyCroissant-720.png" />
+    <Content Include="Resources\Images\HTGame-EmptyCupCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-EmptyCupCake-720.png" />
+    <Content Include="Resources\Images\HTGame-EmptyToast-1080.png" />
+    <Content Include="Resources\Images\HTGame-EmptyToast-720.png" />
+    <Content Include="Resources\Images\HTGame-EnterFKey-1080.png" />
+    <Content Include="Resources\Images\HTGame-EnterFKey-1440.png" />
+    <Content Include="Resources\Images\HTGame-EnterFKey-2160.png" />
+    <Content Include="Resources\Images\HTGame-EnterFKey-720.png" />
+    <Content Include="Resources\Images\HTGame-FriedChicken-1080.png" />
+    <Content Include="Resources\Images\HTGame-FriedChicken-720.png" />
+    <Content Include="Resources\Images\HTGame-FriedChickenToast-1080.png" />
+    <Content Include="Resources\Images\HTGame-FriedChickenToast-720.png" />
+    <Content Include="Resources\Images\HTGame-GameClearFlag-1080.png" />
+    <Content Include="Resources\Images\HTGame-GameClearFlag-720.png" />
+    <Content Include="Resources\Images\HTGame-GameCompleteStar-1080.png" />
+    <Content Include="Resources\Images\HTGame-GameCompleteStar-720.png" />
+    <Content Include="Resources\Images\HTGame-GameFailedStar-1080.png" />
+    <Content Include="Resources\Images\HTGame-GameFailedStar-720.png" />
+    <Content Include="Resources\Images\HTGame-GameResultEnergy-1080.png" />
+    <Content Include="Resources\Images\HTGame-GameResultEnergy-720.png" />
+    <Content Include="Resources\Images\HTGame-GameResultEnergyEmpty-1080.png" />
+    <Content Include="Resources\Images\HTGame-GameResultEnergyEmpty-720.png" />
+    <Content Include="Resources\Images\HTGame-GlassCup-1080.png" />
+    <Content Include="Resources\Images\HTGame-GlassCup-720.png" />
+    <Content Include="Resources\Images\HTGame-Hammer-1080.png" />
+    <Content Include="Resources\Images\HTGame-Hammer-720.png" />
+    <Content Include="Resources\Images\HTGame-OriCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-OriCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-OriginCroissant-1080.png" />
+    <Content Include="Resources\Images\HTGame-OriginCroissant-720.png" />
+    <Content Include="Resources\Images\HTGame-OriginToast-1080.png" />
+    <Content Include="Resources\Images\HTGame-OriginToast-720.png" />
+    <Content Include="Resources\Images\HTGame-PipingBag-1080.png" />
+    <Content Include="Resources\Images\HTGame-PipingBag-720.png" />
+    <Content Include="Resources\Images\HTGame-StartSceneDarkStar-1080.png" />
+    <Content Include="Resources\Images\HTGame-StartSceneDarkStar-720.png" />
+    <Content Include="Resources\Images\HTGame-StartSceneFirstStage-1080.png" />
+    <Content Include="Resources\Images\HTGame-StartSceneFirstStage-720.png" />
+    <Content Include="Resources\Images\HTGame-StartSceneOpen-1080.png" />
+    <Content Include="Resources\Images\HTGame-StartSceneOpen-720.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryGuacamole-1080.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryGuacamole-720.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryGuacamoleCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryGuacamoleCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryJam-1080.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryJam-720.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryJamCake-1080.png" />
+    <Content Include="Resources\Images\HTGame-StrawberryJamCake-720.png" />
+    <Content Include="Resources\Images\HTGame-StrawberrySugar-1080.png" />
+    <Content Include="Resources\Images\HTGame-StrawberrySugar-720.png" />
+    <Content Include="Resources\Images\HTGame-StrawberrySugarCoffee-1080.png" />
+    <Content Include="Resources\Images\HTGame-StrawberrySugarCoffee-720.png" />
+    <Content Include="Resources\Images\HTGame-TeaCup-1080.png" />
+    <Content Include="Resources\Images\HTGame-TeaCup-720.png" />
+    <Content Include="Resources\Images\HTGame-TomatoEgg-1080.png" />
+    <Content Include="Resources\Images\HTGame-TomatoEgg-720.png" />
+    <Content Include="Resources\Images\HTGame-TomatoEggCroissant-1080.png" />
+    <Content Include="Resources\Images\HTGame-TomatoEggCroissant-720.png" />
+    <Content Include="Resources\Images\HTGame-TomatoHam-1080.png" />
+    <Content Include="Resources\Images\HTGame-TomatoHam-720.png" />
+    <Content Include="Resources\Images\HTGame-TomatoHamToast-1080.png" />
+    <Content Include="Resources\Images\HTGame-TomatoHamToast-720.png" />
+    <Content Include="Resources\Images\HTGame-TuanSanLang-1080.png" />
+    <Content Include="Resources\Images\HTGame-TuanSanLang-720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
+      <Version>10.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts">
+      <Version>10.0.19041.2</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>6.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="OpenCvSharp4.Extensions">
+      <Version>4.13.0.20260302</Version>
+    </PackageReference>
+    <PackageReference Include="OpenCvSharp4.Windows">
+      <Version>4.13.0.20260302</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
