@@ -25,6 +25,7 @@ namespace NTECoffeeShop.CoffeeShop
         GameFailedStar, // 游戏失败的提示。
         GameResultEnergy, // 都市活力图标。
         GameResultEnergyEmpty,
+        GameResultEnergyEmptyNum,
 
         EndSceneBackButton,
         EndSceneConfirmButton,
@@ -221,7 +222,8 @@ namespace NTECoffeeShop.CoffeeShop
                 case ETemplateName.GameResultEnergy:
                     return CalculateTemplateRect(1071, 914, 200, 48);
                 case ETemplateName.GameResultEnergyEmpty:
-                    return CalculateTemplateRect(1038, 903, 247, 65);
+                case ETemplateName.GameResultEnergyEmptyNum:
+                    return CalculateTemplateRect(1086, 914, 228, 47);
                 case ETemplateName.EmptyCoffee:
                     return CalculateTemplateRect(1631, 967, 280, 152);
                 case ETemplateName.EmptyCupCake:

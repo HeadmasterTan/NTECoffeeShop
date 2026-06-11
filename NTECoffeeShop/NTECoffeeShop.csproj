@@ -241,6 +241,8 @@
     <Content Include="Resources\Images\HTGame-GameResultEnergy-720.png" />
     <Content Include="Resources\Images\HTGame-GameResultEnergyEmpty-1080.png" />
     <Content Include="Resources\Images\HTGame-GameResultEnergyEmpty-720.png" />
+    <Content Include="Resources\Images\HTGame-GameResultEnergyEmptyNum-1080.png" />
+    <Content Include="Resources\Images\HTGame-GameResultEnergyEmptyNum-720.png" />
     <Content Include="Resources\Images\HTGame-GlassCup-1080.png" />
     <Content Include="Resources\Images\HTGame-GlassCup-720.png" />
     <Content Include="Resources\Images\HTGame-Hammer-1080.png" />

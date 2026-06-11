@@ -1,8 +1,10 @@
 ﻿using NLog;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,6 +12,7 @@ using System.Windows.Forms;
 using static NTECoffeeShop.CoffeeShop.ImageHandler;
 using static NTECoffeeShop.CoffeeShop.ManagerScene;
 using static NTECoffeeShop.CoffeeShop.TemplateController;
+using static System.Windows.Forms.AxHost;
 
 namespace NTECoffeeShop.CoffeeShop
 {
@@ -175,8 +178,11 @@ namespace NTECoffeeShop.CoffeeShop
             {
                 if (endGameLightStarPoint.HasValue)
                 {
-                    Point? energyEmptyPoint = MatchTemplateImgByName(_intPtrGame, ETemplateName.GameResultEnergyEmpty);
-                    if (energyEmptyPoint.HasValue)
+                    Point? energyEmptyPoint =
+                        MatchTemplateImgByName(_intPtrGame, ETemplateName.GameResultEnergyEmpty, null, false);
+                    Point? energyEmptyNumPoint =
+                        MatchTemplateImgByName(_intPtrGame, ETemplateName.GameResultEnergyEmptyNum, null, false);
+                    if (energyEmptyPoint.HasValue && energyEmptyNumPoint.HasValue && _executeType == EExecuteType.Repeat)
                     {
                         SimulateEventHandler.SendScanCodeKeyPress(SimulateEventHandler.SCAN_F11);
                         Log.Warn("【HandleEndGameScene】都市活力已用完 ============================================");
